@@ -9,7 +9,7 @@ node('linux') {
 }
 
 stage ("CreateInstance") {
-    // TODO
+    sh "aws ec2 run-instances --image-id ami-013be31976ca2c322 --count 1 --instance-type t2.micro --key-name seis665_devops --security-group-ids sg-fdefd0b1 --subnet-id subnet-41a22f6f --region us-east-1"
 
 }
 }
